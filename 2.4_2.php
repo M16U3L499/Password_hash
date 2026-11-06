@@ -58,6 +58,7 @@ function escapar(string $valor): string
     <link rel="stylesheet" href="2.4_2.css">
 </head>
 <body>
+    <img class="registration-image" src="imagenes/img2.jpg" alt="Ilustración de una pantalla de inicio de sesión">
     <h1>Registro de usuarios</h1>
 
     <?php if ($errores !== []): ?>
