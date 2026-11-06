@@ -48,12 +48,14 @@ function escapar(string $valor): string
 </head>
 <body>
     <?php if (isset($_SESSION['usuario_autenticado'])): ?>
+        <img class="login-image" src="imagenes/img3.jpg" alt="Inicio de sesión completado">
         <h1>¡Bienvenido, <?= escapar($_SESSION['usuario_autenticado']['nombre']) ?>!</h1>
         <p>Has iniciado sesión como <strong><?= escapar($_SESSION['usuario_autenticado']['login']) ?></strong>.</p>
         <form method="post" action="2.4.php">
             <button type="submit" name="cerrar_sesion" value="1">Cerrar sesión</button>
         </form>
     <?php else: ?>
+        <img class="login-image" src="imagenes/img1.jpg" alt="Ilustración de inicio de sesión">
         <h1>Inicio de sesión</h1>
 
         <?php if (($_GET['registro'] ?? '') === 'exitoso'): ?>
